@@ -36,9 +36,9 @@ async def fetch_info(request_body: dict):
     try:
         info = info_fetcher.fetch_info()
         dataset_info = {
-            "dataset_name": dataset_name,
-            "dataset_size": info.dataset_size,
-            "dataset_size_mb": info.dataset_size / (1024 * 1024),
+            "datasetName": dataset_name,
+            "datasetSize": info.dataset_size,
+            "datasetSizeMb": info.dataset_size / (1024 * 1024),
             "features": info.features
         }
         return dataset_info
